@@ -27,10 +27,27 @@ function drawBall() {
 }
 
 function update() {
-clearRect    
+ctx.clearRect(0, 0, canvas.width, canvas.height);    
 drawBall();
+    
+//positions    
 
-ball.x += ball.dx;    
+ball.x += ball.dx;
+ball.y += ball.dy; 
+    
+//detect walls/collisons
+    
+if(ball.x + ball.size > canvas.width || ball.x -ball.size < 0) {
+    ball.dx = ball.dx * -1;
+} 
+    
+// detect top and bottom walls
+    
+if(ball.y + ball.size > canvas.height || ball.y -ball.size < 0) {
+    ball.dy = ball.dy * -1;
+}     
+    
+    
     
 requestAnimationFrame(update); 
 }
