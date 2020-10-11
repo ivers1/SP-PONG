@@ -23,10 +23,9 @@ let downP = false;
 let pOneScore = 0;
 let pTwoScore = 0;
 
-
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
-
+document.addEventListener("click", dangerSpeed, false);
 
 function keyDownHandler(e) {
     
@@ -57,8 +56,13 @@ function keyUpHandler(e) {
 function reset() {
     x = canvas.width / 2;
     y = canvas.height / 2;
-    dx=-dx;
+    dx =-dx;
     ballSpeed = 5;
+}
+
+function dangerSpeed(){
+    dx = 10;
+    dy = 10;
 }
 
 function drawBall() {
