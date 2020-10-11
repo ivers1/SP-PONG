@@ -7,11 +7,25 @@
     name="description"
     content="Create Pong game with HTML canvas and JS"/>   
   <title>Semester Project Pong</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
   <link rel="stylesheet" href="style.css"/>
   </head>
-  <body>
+  <body>      
+    <a class="button" href="score.html">HIGHSCORE</a>
+      <div id="box">
       <h1>Pong - The Game</h1>
-      <canvas id="canvas" width="600" height="600"></canvas>
-       <script src="canvas.js"></script>
+      </div>
+      
+      <form action="game.html">
+          <input type="text" id="playerOne"/>
+        <input type="submit" class="button" value="EASY" onclick="playerName();"/>
+        <input type="submit" class="button" value="HARD" onclick="playerName();" style = background-color: red;/>      
+            </form> 
+      
+      <script src="ls.js"></script>
+       <script src="cg.js"></script>
       </body>
 </html>

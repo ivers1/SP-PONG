@@ -2,16 +2,94 @@
     box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+html, body {
+    width: 100%;
+    height: 100%;
     margin: 0;
+    background: black;
+    font-family: 'Roboto', sans-serif;
 }
 
 #canvas {
-    border: 1px solid black;
-    background: #d79c50;
+    position: relative;    
+    border: 2px solid black;
+    background: white;
+}
+
+#box {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15%;
+}
+
+.highScore {
+    font-size: 150px;
+    color: white;
+    position: absolute;
+}
+
+
+ul{
+    list-style-type: none;
+}
+
+.button {
+    background-color: white;
+    border: 0;
+    border-radius: 200px;
+    padding: 16px 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+    font-size: 16px;
+    margin: 16px;
+    min-width: 160px;
+    outline: none;
+    transition: .25s;
+    opacity: .75;
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 1;
+}
+
+#playerOne{
+    background-color: white;
+    border: 0;
+    padding: 16px 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+    font-size: 16px;
+    margin: 16px;
+    min-width: 160px;
+    outline: none;
+}
+
+h1 {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 48px;
+    margin-top: 0;
+    border-bottom: 50px teal solid;
+}
+
+h2 {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 36px;
+    margin-top: -10%;
+    border-bottom: 50px teal solid;
 }
