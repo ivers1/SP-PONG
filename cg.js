@@ -2,7 +2,6 @@ let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 
 let ballRadius = 10;
-let ballSpeed = 5;
 let x = canvas.width / 2;
 let y = canvas.height / 2;
 let dx = 5;
@@ -26,6 +25,7 @@ let pTwoScore = 0;
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 document.addEventListener("click", dangerSpeed, false);
+document.addEventListener("click", startGame, false);
 
 function keyDownHandler(e) {
     
@@ -57,12 +57,16 @@ function reset() {
     x = canvas.width / 2;
     y = canvas.height / 2;
     dx =-dx;
-    ballSpeed = 5;
 }
 
 function dangerSpeed(){
     dx = 10;
     dy = 10;
+    ai = 0.10;
+}
+
+function startGame(){
+    
 }
 
 function drawBall() {
